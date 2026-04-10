@@ -1,0 +1,767 @@
+/* ============================================================
+   RETROSPECTIVA CLIQUE DIÁRIO — CSS Principal
+   Design System · Alfa Bile · 2026
+   ============================================================ */
+
+/* --- VARIÁVEIS -------------------------------------------- */
+:root {
+  --preto:       #0A0A08;
+  --carbon:      #111110;
+  --ambar:       #C8922A;
+  --ambar-claro: #E8B96A;
+  --texto:       #D4CFC4;
+  --texto-suave: #8A8070;
+  --branco-osso: #F0EBE0;
+  --navbar-h:    72px;
+}
+
+/* --- RESET & BASE ----------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--preto);
+  color: var(--texto);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+a { color: inherit; text-decoration: none; }
+
+/* --- TIPOGRAFIA ------------------------------------------- */
+.cormorant { font-family: 'Cormorant Garamond', serif; }
+.cinzel    { font-family: 'Cinzel', serif; }
+
+/* --- ELEMENTOS COMUNS ------------------------------------- */
+.amber-bar {
+  width: 48px;
+  height: 2px;
+  background: var(--ambar);
+  margin: 1.25rem 0;
+}
+.amber-bar--left   { margin-left: 0; }
+.amber-bar--center { margin: 1.25rem auto; }
+
+.section-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--ambar);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--branco-osso);
+  line-height: 1.2;
+}
+.section-title--center { text-align: center; }
+
+.section-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: var(--texto);
+  line-height: 1.8;
+}
+
+/* --- BOTÕES ----------------------------------------------- */
+.btn-amber {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--preto);
+  background: var(--ambar);
+  padding: 0.85rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+.btn-amber:hover { background: var(--ambar-claro); color: var(--preto); }
+
+.btn-outline-amber {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ambar);
+  border: 1px solid var(--ambar);
+  padding: 0.85rem 2rem;
+  transition: background 0.25s, color 0.25s;
+}
+.btn-outline-amber:hover {
+  background: var(--ambar);
+  color: var(--preto);
+}
+
+/* --- NAVBAR ----------------------------------------------- */
+#navbar {
+  background-color: var(--carbon);
+  height: var(--navbar-h);
+  border-bottom: 1px solid rgba(200, 146, 42, 0.15);
+  transition: background 0.3s;
+}
+
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  gap: 1px;
+}
+.brand-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  color: var(--ambar);
+  text-transform: uppercase;
+}
+.brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--branco-osso);
+  font-style: italic;
+}
+
+.nav-link {
+  font-family: 'Cinzel', serif !important;
+  font-size: 11px !important;
+  letter-spacing: 0.15em !important;
+  color: var(--texto-suave) !important;
+  text-transform: uppercase;
+  transition: color 0.2s !important;
+  padding: 0.5rem 0.75rem !important;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--ambar-claro) !important;
+}
+
+/* --- HERO ------------------------------------------------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--preto);
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,10,8,0.55) 0%,
+    rgba(10,10,8,0.75) 60%,
+    rgba(10,10,8,0.95) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 1.5rem;
+  max-width: 700px;
+}
+
+.hero-pretitle {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: var(--ambar);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  color: var(--branco-osso);
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+.hero-title em {
+  display: block;
+  font-style: italic;
+  color: var(--ambar-claro);
+}
+
+.hero-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.05rem;
+  color: var(--texto);
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: var(--texto-suave);
+  font-size: 1.25rem;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(8px); }
+}
+
+/* --- MORFISMO SECTION ------------------------------------- */
+.morph-section {
+  padding: 0;
+  background: var(--preto);
+}
+
+.morph-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 70vh;
+  min-height: 400px;
+}
+
+.morph-col-right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.morph-placeholder {
+  position: relative;
+  background: var(--carbon);
+  border: 1px solid rgba(200, 146, 42, 0.08);
+  overflow: hidden;
+}
+.morph-placeholder--2 { background: #0e0e0c; }
+.morph-placeholder--3 { background: #141412; }
+
+.morph-label {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+.morph-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--ambar);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.morph-caption {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  color: var(--branco-osso);
+  font-style: italic;
+  margin: 0;
+}
+
+/* --- ABOUT SECTION ---------------------------------------- */
+.about-section {
+  padding: 7rem 0;
+  background: var(--carbon);
+}
+
+/* --- i.ALFA SECTION --------------------------------------- */
+.ialfa-section {
+  padding: 7rem 0;
+  background: var(--preto);
+  border-top: 1px solid rgba(200, 146, 42, 0.12);
+}
+
+.ialfa-box {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ialfa-desc {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: var(--texto-suave);
+  margin: 1.5rem 0 2.5rem;
+  line-height: 1.8;
+}
+
+.ialfa-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.ialfa-input {
+  background: var(--carbon);
+  border: 1px solid rgba(200, 146, 42, 0.2);
+  color: var(--branco-osso);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.25rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+.ialfa-input::placeholder { color: var(--texto-suave); }
+.ialfa-input:focus { border-color: var(--ambar); }
+
+.ialfa-result { margin-top: 2.5rem; }
+
+.ialfa-poem {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--branco-osso);
+  line-height: 1.9;
+  white-space: pre-line;
+  margin-bottom: 2rem;
+}
+
+.ialfa-photo img {
+  max-width: 380px;
+  margin: 0 auto;
+  border: 1px solid rgba(200, 146, 42, 0.2);
+}
+
+.ialfa-loading {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.loading-dot {
+  width: 8px; height: 8px;
+  background: var(--ambar);
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 1.2s infinite ease-in-out;
+}
+.loading-dot:nth-child(2) { animation-delay: 0.2s; }
+.loading-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50%       { opacity: 1;   transform: scale(1); }
+}
+
+/* --- PAGE HEADER ------------------------------------------ */
+.page-header {
+  padding-top: calc(var(--navbar-h) + 5rem);
+  padding-bottom: 4rem;
+  text-align: center;
+  background: var(--preto);
+}
+
+.page-header-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+  color: var(--branco-osso);
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.page-header-sub {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* --- GALLERY ---------------------------------------------- */
+.gallery-section {
+  padding: 3rem 1rem 5rem;
+  background: var(--preto);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 1 / 1;
+}
+.gallery-item.span-2 {
+  grid-column: span 2;
+  aspect-ratio: 2 / 1;
+}
+
+.gallery-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--carbon);
+}
+
+.gallery-img-wrap img {
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover .gallery-img-wrap img {
+  transform: scale(1.04);
+}
+
+.gallery-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem 1.25rem 1.25rem;
+  background: linear-gradient(to top, rgba(10,10,8,0.88) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gallery-item:hover .gallery-hover { opacity: 1; }
+
+.gallery-hover-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--branco-osso);
+  margin: 0;
+}
+
+/* --- LIGHTBOX --------------------------------------------- */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,8,0.97);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox.active {
+  display: flex;
+}
+
+/* Foto no lightbox — ocupa a tela toda */
+.lightbox-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Ken Burns — zoom suave aplicado via JS ao abrir o lightbox */
+@keyframes kenburns {
+  0%   { transform: scale(1)    translate(0, 0); }
+  100% { transform: scale(1.06) translate(-1.5%, 1%); }
+}
+.lightbox-foto.ken-burns {
+  animation: kenburns 12s ease-in-out forwards;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--texto-suave);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+  transition: color 0.2s;
+}
+.lightbox-close:hover { color: var(--branco-osso); }
+
+/* --- ARTISTA SECTION -------------------------------------- */
+.artist-section {
+  padding: 6rem 0;
+  background: var(--preto);
+}
+
+.artist-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--ambar);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.artist-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 5vw, 4rem);
+  font-weight: 300;
+  color: var(--branco-osso);
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.artist-bio {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.97rem;
+  color: var(--texto);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.artist-sublabel {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+.artist-photo-col { margin-top: 1rem; }
+
+.artist-photo-frame {
+  border-left: 2px solid var(--ambar);
+  padding-left: 1.5rem;
+  background: var(--carbon);
+}
+
+.artist-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(15%);
+}
+
+/* --- AWARDS STRIP ----------------------------------------- */
+.awards-strip {
+  background: var(--carbon);
+  border-top: 1px solid var(--ambar);
+  border-bottom: 1px solid rgba(200,146,42,0.15);
+  padding: 1.5rem 0;
+}
+
+.awards-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.award-chip {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--texto-suave);
+  border: 1px solid rgba(200,146,42,0.2);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* --- CONTATO SECTION -------------------------------------- */
+.contact-section {
+  padding: 5rem 0 7rem;
+  background: var(--preto);
+}
+
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.contact-channel {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--carbon);
+  border: 1px solid rgba(200,146,42,0.12);
+  transition: border-color 0.2s;
+}
+.contact-channel:hover { border-color: var(--ambar); }
+
+.contact-channel-icon { font-size: 1.5rem; }
+
+.contact-channel-label {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--ambar);
+  display: block;
+}
+
+.contact-channel-value {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: var(--branco-osso);
+  margin: 0;
+}
+
+.contact-divider {
+  text-align: center;
+  position: relative;
+  margin: 2.5rem 0;
+}
+.contact-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  height: 1px;
+  background: rgba(200,146,42,0.12);
+}
+.contact-divider span {
+  position: relative;
+  background: var(--preto);
+  padding: 0 1rem;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+}
+
+.contact-form-label {
+  font-family: 'Cinzel', serif !important;
+  font-size: 10px !important;
+  letter-spacing: 0.18em !important;
+  color: var(--texto-suave) !important;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem !important;
+}
+
+.contact-input {
+  background: var(--carbon) !important;
+  border: 1px solid rgba(200,146,42,0.15) !important;
+  border-radius: 0 !important;
+  color: var(--branco-osso) !important;
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 0.95rem !important;
+  padding: 0.85rem 1.25rem !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s;
+}
+.contact-input::placeholder { color: var(--texto-suave) !important; }
+.contact-input:focus {
+  border-color: var(--ambar) !important;
+  box-shadow: none !important;
+  background: var(--carbon) !important;
+}
+
+.contact-note {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+  margin-top: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* --- FOOTER ----------------------------------------------- */
+.site-footer {
+  background: var(--carbon);
+  border-top: 1px solid rgba(200,146,42,0.1);
+  padding: 3rem 0 2rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--branco-osso);
+  margin: 0;
+}
+.footer-sub {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  margin: 0.25rem 0 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-links a {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--ambar); }
+
+.footer-copy {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(138,128,112,0.5);
+  text-align: center;
+  margin: 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(200,146,42,0.06);
+}
+
+/* --- RESPONSIVIDADE --------------------------------------- */
+@media (max-width: 991px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .gallery-item.span-2 {
+    grid-column: span 2;
+    aspect-ratio: 2 / 1;
+  }
+  .morph-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .morph-col-right {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .artist-photo-col { margin-top: 3rem; }
+}
+
+@media (max-width: 575px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+  }
+  .gallery-item.span-2 {
+    grid-column: span 2;
+  }
+  .hero-title { font-size: 3rem; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .awards-inner { justify-content: flex-start; }
+}

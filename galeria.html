@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria — Retrospectiva Clique Diário</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand brand-logo" href="index.html">
+        <span class="brand-tag">CLIQUE DIÁRIO</span>
+        <span class="brand-name">Retrospectiva</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="galeria.html">Galeria</a></li>
+          <li class="nav-item"><a class="nav-link" href="artista.html">O Artista</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <p class="hero-pretitle">EXPOSIÇÃO VIRTUAL</p>
+    <h1 class="page-header-title">Galeria</h1>
+    <div class="amber-bar amber-bar--center"></div>
+    <p class="page-header-sub">12 imagens. 12 histórias. Uma cidade.</p>
+  </header>
+
+  <!-- GALLERY GRID -->
+  <section class="gallery-section">
+    <div class="gallery-grid">
+
+      <div class="gallery-item span-2" data-foto="assets/images/foto-01.jpg" data-audio="assets/audio/voz/g1-01-peixeiro-do-porto.mp3" data-title="O Peixeiro do Porto">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-01.jpg" alt="O Peixeiro do Porto" loading="lazy" />
+          <div class="gallery-hover">
+            <p class="gallery-hover-title">O Peixeiro do Porto</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-02.jpg" data-audio="assets/audio/voz/g1-02-luz-entre-concreto.mp3" data-title="Luz Entre Concreto">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-02.jpg" alt="Luz Entre Concreto" loading="lazy" />
+          <div class="gallery-hover">
+            <p class="gallery-hover-title">Luz Entre Concreto</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-03.jpg" data-audio="assets/audio/voz/g1-03-manha-no-cais.mp3" data-title="Manhã no Cais">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-03.jpg" alt="Manhã no Cais" loading="lazy" />
+          <div class="gallery-hover">
+            <p class="gallery-hover-title">Manhã no Cais</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-04.jpg" data-audio="assets/audio/voz/g1-04-o-rio-que-lembra.mp3" data-title="O Rio Que Lembra">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-04.jpg" alt="O Rio Que Lembra" loading="lazy" />
+          <div class="gallery-hover">
+            <p class="gallery-hover-title">O Rio Que Lembra</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item span-2" data-foto="assets/images/foto-05.jpg" data-audio="assets/audio/voz/g1-05-ceu-em-chamas.mp3" data-title="Céu em Chamas">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-05.jpg" alt="Céu em Chamas" loading="lazy" />
+          <div class="gallery-hover">
+            <p class="gallery-hover-title">Céu em Chamas</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-06.jpg" data-audio="assets/audio/voz/g1-06-silencio-antes-da-pesca.mp3" data-title="Silêncio Antes da Pesca">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-06.jpg" alt="Silêncio Antes da Pesca" loading="lazy" />
+          <div class="gallery-hover">
+            <p class="gallery-hover-title">Silêncio Antes da Pesca</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-07.jpg" data-audio="assets/audio/voz/g1-07-a-crianca-e-o-mar.mp3" data-title="A Criança e o Mar">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-07.jpg" alt="A Criança e o Mar" loading="lazy" />
+          <div class="gallery-hover">
+            <p class="gallery-hover-title">A Criança e o Mar</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item span-2" data-foto="assets/images/foto-08.jpg" data-audio="assets/audio/voz/g1-08-entre-verde-e-sal.mp3" data-title="Entre Verde e Sal">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-08.jpg" alt="Entre Verde e Sal" loading="lazy" />
+          <div class="gallery-hover">
+            <p class="gallery-hover-title">Entre Verde e Sal</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-09.jpg" data-audio="assets/audio/voz/g1-09-janela-para-o-cais.mp3" data-title="Janela para o Cais">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-09.jpg" alt="Janela para o Cais" loading="lazy" />
+          <div class="gallery-hover">
+            <p class="gallery-hover-title">Janela para o Cais</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-10.jpg" data-audio="assets/audio/voz/g1-10-a-estrada-ao-infinito.mp3" data-title="A Estrada ao Infinito">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-10.jpg" alt="A Estrada ao Infinito" loading="lazy" />
+          <div class="gallery-hover">
+            <p class="gallery-hover-title">A Estrada ao Infinito</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-11.jpg" data-audio="assets/audio/voz/g1-11-reflexo-do-porto.mp3" data-title="Reflexo do Porto">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-11.jpg" alt="Reflexo do Porto" loading="lazy" />
+          <div class="gallery-hover">
+            <p class="gallery-hover-title">Reflexo do Porto</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item span-2" data-foto="assets/images/foto-12.jpg" data-audio="assets/audio/voz/g1-12-o-ultimo-barco.mp3" data-title="O Último Barco">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-12.jpg" alt="O Último Barco" loading="lazy" />
+          <div class="gallery-hover">
+            <p class="gallery-hover-title">O Último Barco</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- i.ALFA -->
+  <section class="ialfa-section" id="ialfa">
+    <div class="container">
+      <div class="ialfa-box">
+        <span class="section-tag">EXPERIÊNCIA INTERATIVA</span>
+        <h2 class="section-title section-title--center">i.Alfa</h2>
+        <p class="ialfa-desc">Diga seu nome e uma palavra que define seu momento.<br />O espírito de Alfa Bile escreve um poema só para você.</p>
+        <div class="ialfa-form">
+          <input type="text" id="ialfa-nome" class="ialfa-input" placeholder="Seu nome" maxlength="40" />
+          <input type="text" id="ialfa-palavra" class="ialfa-input" placeholder="Uma palavra" maxlength="40" />
+          <button class="btn-amber" id="ialfa-btn" onclick="gerarPoema()">Gerar Poema</button>
+        </div>
+        <div class="ialfa-result" id="ialfa-result" style="display:none;">
+          <div class="ialfa-poem" id="ialfa-poem"></div>
+          <div class="ialfa-photo" id="ialfa-photo"></div>
+        </div>
+        <div class="ialfa-loading" id="ialfa-loading" style="display:none;">
+          <span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">✕</button>
+    <img class="lightbox-foto" id="lightbox-foto" src="" alt="" />
+    <audio id="lightbox-audio" autoplay></audio>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-brand">Retrospectiva <em>Clique Diário</em></p>
+          <p class="footer-sub">Alfa Bile · Itajaí, SC · 2026</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://instagram.com/alfabile" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://facebook.com/alfabilefotografia" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <p class="footer-copy">Projeto extensionista HOW5 · UNIVALI ADS · 2026</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/ialfa.js"></script>
+</body>
+</html>
