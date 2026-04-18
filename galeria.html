@@ -1,317 +1,185 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galeria 01 — Retrospectiva Clique Diário</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Raleway:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
-      <div class="container-fluid px-4">
-        <a class="navbar-brand brand-logo" href="index.html">
-          <span class="brand-tag">CLIQUE DIÁRIO</span>
-          <span class="brand-name">Retrospectiva</span>
-        </a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navMenu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-          <ul class="navbar-nav gap-2">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="galeria.html">Galeria</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="artista.html">O Artista</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contato.html">Contato</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria 01 — Retrospectiva Clique Diário</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
 
-    <!-- PAGE HEADER -->
-    <header class="page-header">
-      <p class="hero-pretitle">Galeria 01</p>
-      <h1 class="page-header-title">Memória de Gigantes</h1>
-      <div class="amber-bar amber-bar--center"></div>
-    </header>
-
-    <!-- GALLERY GRID -->
-    <section class="gallery-section">
-      <div class="gallery-grid">
-        <div
-          class="gallery-item span-2"
-          data-foto="assets/images/foto-01.jpg"
-          data-audio="assets/audio/voz/g1-01.mp3"
-          data-title="Foto 01"
-        >
-          <div class="gallery-img-wrap">
-            <img src="assets/images/foto-01.jpg" alt="Foto 01" loading="lazy" />
-            <div class="gallery-hover">
-              <p class="gallery-hover-title">Entre Redes e Gigantes</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="gallery-item"
-          data-foto="assets/images/foto-02.jpg"
-          data-audio="assets/audio/voz/g1-02.mp3"
-          data-title="Foto 02"
-        >
-          <div class="gallery-img-wrap">
-            <img src="assets/images/foto-02.jpg" alt="Foto 02" loading="lazy" />
-            <div class="gallery-hover">
-              <p class="gallery-hover-title">Asas do Ofício</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="gallery-item"
-          data-foto="assets/images/foto-03.jpg"
-          data-audio="assets/audio/voz/g1-03.mp3"
-          data-title="Foto 03"
-        >
-          <div class="gallery-img-wrap">
-            <img src="assets/images/foto-03.jpg" alt="Foto 03" loading="lazy" />
-            <div class="gallery-hover">
-              <p class="gallery-hover-title">Entre Redes e Gigantes</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="gallery-item"
-          data-foto="assets/images/foto-04.jpg"
-          data-audio="assets/audio/voz/g1-04.mp3"
-          data-title="Foto 04"
-        >
-          <div class="gallery-img-wrap">
-            <img src="assets/images/foto-04.jpg" alt="Foto 04" loading="lazy" />
-            <div class="gallery-hover">
-              <p class="gallery-hover-title">Entre o Ritmo e a Calma</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="gallery-item span-2"
-          data-foto="assets/images/foto-05.jpg"
-          data-audio="assets/audio/voz/g1-05.mp3"
-          data-title="Foto 05"
-        >
-          <div class="gallery-img-wrap">
-            <img src="assets/images/foto-05.jpg" alt="Foto 05" loading="lazy" />
-            <div class="gallery-hover">
-              <p class="gallery-hover-title">Cerimônia de Chegada</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="gallery-item"
-          data-foto="assets/images/foto-06.jpg"
-          data-audio="assets/audio/voz/g1-06.mp3"
-          data-title="Foto 06"
-        >
-          <div class="gallery-img-wrap">
-            <img src="assets/images/foto-06.jpg" alt="Foto 06" loading="lazy" />
-            <div class="gallery-hover">
-              <p class="gallery-hover-title">Diálogo de Gigantes</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="gallery-item"
-          data-foto="assets/images/foto-07.jpg"
-          data-audio="assets/audio/voz/g1-07.mp3"
-          data-title="Foto 07"
-        >
-          <div class="gallery-img-wrap">
-            <img src="assets/images/foto-07.jpg" alt="Foto 07" loading="lazy" />
-            <div class="gallery-hover">
-              <p class="gallery-hover-title">Rota de Aço</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="gallery-item span-2"
-          data-foto="assets/images/foto-08.jpg"
-          data-audio="assets/audio/voz/g1-08.mp3"
-          data-title="Foto 08"
-        >
-          <div class="gallery-img-wrap">
-            <img src="assets/images/foto-08.jpg" alt="Foto 08" loading="lazy" />
-            <div class="gallery-hover">
-              <p class="gallery-hover-title">Rota Dourada</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="gallery-item"
-          data-foto="assets/images/foto-09.jpg"
-          data-audio="assets/audio/voz/g1-09.mp3"
-          data-title="Foto 09"
-        >
-          <div class="gallery-img-wrap">
-            <img src="assets/images/foto-09.jpg" alt="Foto 09" loading="lazy" />
-            <div class="gallery-hover">
-              <p class="gallery-hover-title">Cidades Entre Nuvens</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="gallery-item"
-          data-foto="assets/images/foto-10.jpg"
-          data-audio="assets/audio/voz/g1-10.mp3"
-          data-title="Foto 10"
-        >
-          <div class="gallery-img-wrap">
-            <img src="assets/images/foto-10.jpg" alt="Foto 10" loading="lazy" />
-            <div class="gallery-hover">
-              <p class="gallery-hover-title">Partida Dourada</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="gallery-item"
-          data-foto="assets/images/foto-11.jpg"
-          data-audio="assets/audio/voz/g1-11.mp3"
-          data-title="Foto 11"
-        >
-          <div class="gallery-img-wrap">
-            <img src="assets/images/foto-11.jpg" alt="Foto 11" loading="lazy" />
-            <div class="gallery-hover">
-              <p class="gallery-hover-title">Caminho que Encontra o Mar</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="gallery-item span-2"
-          data-foto="assets/images/foto-12.jpg"
-          data-audio="assets/audio/voz/g1-12.mp3"
-          data-title="Foto 12"
-        >
-          <div class="gallery-img-wrap">
-            <img src="assets/images/foto-12.jpg" alt="Foto 12" loading="lazy" />
-            <div class="gallery-hover">
-              <p class="gallery-hover-title">Cidade que Nasce</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- i.ALFA -->
-    <section class="ialfa-section" id="ialfa">
-      <div class="container">
-        <div class="ialfa-box">
-          <span class="section-tag">EXPERIÊNCIA INTERATIVA</span>
-          <h2 class="section-title section-title--center">i.Alfa</h2>
-          <p class="ialfa-desc">
-            Diga seu nome e uma palavra que define seu momento.<br />O espírito
-            de Alfa Bile escreve um poema só para você.
-          </p>
-          <div class="ialfa-form">
-            <input
-              type="text"
-              id="ialfa-nome"
-              class="ialfa-input"
-              placeholder="Seu nome"
-              maxlength="40"
-            />
-            <input
-              type="text"
-              id="ialfa-palavra"
-              class="ialfa-input"
-              placeholder="Uma palavra"
-              maxlength="40"
-            />
-            <button class="btn-amber" id="ialfa-btn" onclick="gerarPoema()">
-              Gerar Poema
-            </button>
-          </div>
-          <div class="ialfa-result" id="ialfa-result" style="display: none">
-            <div class="ialfa-poem" id="ialfa-poem"></div>
-            <div class="ialfa-photo" id="ialfa-photo"></div>
-          </div>
-          <div class="ialfa-loading" id="ialfa-loading" style="display: none">
-            <span class="loading-dot"></span><span class="loading-dot"></span
-            ><span class="loading-dot"></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox">
-      <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">
-        ✕
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand brand-logo" href="index.html">
+        <span class="brand-tag">CLIQUE DIÁRIO</span>
+        <span class="brand-name">Retrospectiva</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <img class="lightbox-foto" id="lightbox-foto" src="" alt="" />
-      <audio id="lightbox-audio" autoplay></audio>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-inner">
-          <div>
-            <p class="footer-brand">Retrospectiva <em>Clique Diário</em></p>
-            <p class="footer-sub">Alfa Bile · Itajaí, SC · 2026</p>
-          </div>
-          <div class="footer-links">
-            <a
-              href="https://instagram.com/alfabile"
-              target="_blank"
-              rel="noopener"
-              >Instagram</a
-            >
-            <a
-              href="https://facebook.com/alfabilefotografia"
-              target="_blank"
-              rel="noopener"
-              >Facebook</a
-            >
-          </div>
-        </div>
-        <p class="footer-copy">
-          Projeto extensionista HOW5 · UNIVALI ADS · 2026
-        </p>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="galeria.html">Galeria</a></li>
+          <li class="nav-item"><a class="nav-link" href="artista.html">O Artista</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
       </div>
-    </footer>
+    </div>
+  </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/ialfa.js"></script>
-  </body>
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <p class="hero-pretitle">Galeria 01</p>
+    <h1 class="page-header-title">Porto e Memória</h1>
+    <div class="amber-bar amber-bar--center"></div>
+  </header>
+
+  <!-- GALLERY GRID -->
+  <section class="gallery-section">
+    <div class="gallery-grid">
+
+      <div class="gallery-item span-2" data-foto="assets/images/foto-01.jpg" data-audio="assets/audio/voz/g1-01.mp3" data-title="Foto 01" data-position="center 30%">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-01.jpg" alt="Foto 01" loading="lazy" style="object-position: center 30%;" />
+          <div class="gallery-hover"><p class="gallery-hover-title">Foto 01</p></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-02.jpg" data-audio="assets/audio/voz/g1-02.mp3" data-title="Foto 02" data-position="center 40%">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-02.jpg" alt="Foto 02" loading="lazy" style="object-position: center 40%;" />
+          <div class="gallery-hover"><p class="gallery-hover-title">Foto 02</p></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-03.jpg" data-audio="assets/audio/voz/g1-03.mp3" data-title="Foto 03" data-position="center 60%">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-03.jpg" alt="Foto 03" loading="lazy" style="object-position: center 60%;" />
+          <div class="gallery-hover"><p class="gallery-hover-title">Foto 03</p></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-04.jpg" data-audio="assets/audio/voz/g1-04.mp3" data-title="Foto 04" data-position="center 50%">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-04.jpg" alt="Foto 04" loading="lazy" style="object-position: center 50%;" />
+          <div class="gallery-hover"><p class="gallery-hover-title">Foto 04</p></div>
+        </div>
+      </div>
+
+      <div class="gallery-item span-2" data-foto="assets/images/foto-05.jpg" data-audio="assets/audio/voz/g1-05.mp3" data-title="Foto 05" data-position="center 35%">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-05.jpg" alt="Foto 05" loading="lazy" style="object-position: center 35%;" />
+          <div class="gallery-hover"><p class="gallery-hover-title">Foto 05</p></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-06.jpg" data-audio="assets/audio/voz/g1-06.mp3" data-title="Foto 06" data-position="center 40%">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-06.jpg" alt="Foto 06" loading="lazy" style="object-position: center 40%;" />
+          <div class="gallery-hover"><p class="gallery-hover-title">Foto 06</p></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-07.jpg" data-audio="assets/audio/voz/g1-07.mp3" data-title="Foto 07" data-position="center 35%">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-07.jpg" alt="Foto 07" loading="lazy" style="object-position: center 35%;" />
+          <div class="gallery-hover"><p class="gallery-hover-title">Foto 07</p></div>
+        </div>
+      </div>
+
+      <div class="gallery-item span-2" data-foto="assets/images/foto-08.jpg" data-audio="assets/audio/voz/g1-08.mp3" data-title="Foto 08" data-position="center 50%">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-08.jpg" alt="Foto 08" loading="lazy" style="object-position: center 50%;" />
+          <div class="gallery-hover"><p class="gallery-hover-title">Foto 08</p></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-09.jpg" data-audio="assets/audio/voz/g1-09.mp3" data-title="Foto 09" data-position="center 40%">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-09.jpg" alt="Foto 09" loading="lazy" style="object-position: center 40%;" />
+          <div class="gallery-hover"><p class="gallery-hover-title">Foto 09</p></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-10.jpg" data-audio="assets/audio/voz/g1-10.mp3" data-title="Foto 10" data-position="center 45%">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-10.jpg" alt="Foto 10" loading="lazy" style="object-position: center 45%;" />
+          <div class="gallery-hover"><p class="gallery-hover-title">Foto 10</p></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-foto="assets/images/foto-11.jpg" data-audio="assets/audio/voz/g1-11.mp3" data-title="Foto 11" data-position="center 40%">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-11.jpg" alt="Foto 11" loading="lazy" style="object-position: center 40%;" />
+          <div class="gallery-hover"><p class="gallery-hover-title">Foto 11</p></div>
+        </div>
+      </div>
+
+      <div class="gallery-item span-2" data-foto="assets/images/foto-12.jpg" data-audio="assets/audio/voz/g1-12.mp3" data-title="Foto 12" data-position="center 45%">
+        <div class="gallery-img-wrap">
+          <img src="assets/images/foto-12.jpg" alt="Foto 12" loading="lazy" style="object-position: center 45%;" />
+          <div class="gallery-hover"><p class="gallery-hover-title">Foto 12</p></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- i.ALFA -->
+  <section class="ialfa-section" id="ialfa">
+    <div class="container">
+      <div class="ialfa-box">
+        <span class="section-tag">EXPERIÊNCIA INTERATIVA</span>
+        <h2 class="section-title section-title--center">i.Alfa</h2>
+        <p class="ialfa-desc">Diga seu nome e uma palavra que define seu momento.<br />O espírito de Alfa Bile escreve um poema só para você.</p>
+        <div class="ialfa-form">
+          <input type="text" id="ialfa-nome" class="ialfa-input" placeholder="Seu nome" maxlength="40" />
+          <input type="text" id="ialfa-palavra" class="ialfa-input" placeholder="Uma palavra" maxlength="40" />
+          <button class="btn-amber" id="ialfa-btn" onclick="gerarPoema()">Gerar Poema</button>
+        </div>
+        <div class="ialfa-result" id="ialfa-result" style="display:none;">
+          <div class="ialfa-poem" id="ialfa-poem"></div>
+          <div class="ialfa-photo" id="ialfa-photo"></div>
+        </div>
+        <div class="ialfa-loading" id="ialfa-loading" style="display:none;">
+          <span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">✕</button>
+    <img class="lightbox-foto" id="lightbox-foto" src="" alt="" />
+    <audio id="lightbox-audio" autoplay></audio>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-brand">Retrospectiva <em>Clique Diário</em></p>
+          <p class="footer-sub">Alfa Bile · Itajaí, SC · 2026</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://instagram.com/alfabile" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://facebook.com/alfabilefotografia" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <p class="footer-copy">Projeto extensionista HOW5 · UNIVALI ADS · 2026</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/ialfa.js"></script>
+</body>
 </html>
