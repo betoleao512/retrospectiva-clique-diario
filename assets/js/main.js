@@ -1,6 +1,6 @@
 /* ============================================================
    RETROSPECTIVA CLIQUE DIÁRIO — main.js
-   Navbar scroll · Lightbox com foto + áudio + Ken Burns + fade out
+   Navbar scroll · Lightbox com foto + áudio + Ken Burns sincronizado
    ============================================================ */
 
 // --- NAVBAR --------------------------------------------------
@@ -27,12 +27,12 @@ const galleryItems  = document.querySelectorAll('.gallery-item');
 if (galleryItems.length && lightbox) {
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
-      const audioSrc  = item.dataset.audio;
-      const fotoSrc   = item.dataset.foto;
-      const fotoPos   = item.dataset.position || 'center center';
+      const audioSrc = item.dataset.audio;
+      const fotoSrc  = item.dataset.foto;
+      const fotoPos  = item.dataset.position || 'center center';
       if (!audioSrc || !fotoSrc) return;
 
-      // Garante que lightbox está visível e sem fade
+      // Garante estado limpo
       lightbox.classList.remove('fadeout');
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
@@ -41,14 +41,17 @@ if (galleryItems.length && lightbox) {
       lightboxFoto.src = fotoSrc;
       lightboxFoto.style.objectPosition = fotoPos;
 
-      // Reinicia Ken Burns
+      // Remove Ken Burns — será aplicado após saber a duração do áudio
       lightboxFoto.classList.remove('ken-burns');
-      void lightboxFoto.offsetWidth;
-      lightboxFoto.classList.add('ken-burns');
+      lightboxFoto.style.animationDuration = '';
 
-      // Carrega e toca áudio
+      // Carrega áudio
       lightboxAudio.src = audioSrc;
       lightboxAudio.load();
+
+      // Quando o áudio estiver pronto, sincroniza Ken Burns com sua duração
+      lightboxAudio.addEventListener('loadedmetadata', aplicarKenBurns, { once: true });
+
       lightboxAudio.play();
     });
   });
@@ -66,10 +69,18 @@ if (galleryItems.length && lightbox) {
     if (e.key === 'Escape') fecharLightbox();
   });
 
-  // Fechar automaticamente quando o áudio termina — com fade out
+  // Fechar automaticamente com fade out quando áudio termina
   lightboxAudio.addEventListener('ended', () => {
     fecharLightboxComFade();
   });
+}
+
+// Aplica Ken Burns com duração igual à do áudio
+function aplicarKenBurns() {
+  const duracao = lightboxAudio.duration || 12;
+  void lightboxFoto.offsetWidth; // força reflow para reiniciar animação
+  lightboxFoto.style.animationDuration = duracao + 's';
+  lightboxFoto.classList.add('ken-burns');
 }
 
 // Fecha imediatamente (botão ✕ ou Escape)
@@ -79,6 +90,7 @@ function fecharLightbox() {
   lightboxAudio.src = '';
   lightboxFoto.src  = '';
   lightboxFoto.classList.remove('ken-burns');
+  lightboxFoto.style.animationDuration = '';
   lightbox.classList.remove('active', 'fadeout');
   document.body.style.overflow = '';
 }
@@ -87,16 +99,14 @@ function fecharLightbox() {
 function fecharLightboxComFade() {
   if (!lightbox) return;
   lightboxAudio.pause();
-
-  // Inicia fade out
   lightbox.classList.add('fadeout');
 
-  // Após a animação terminar, limpa tudo
   setTimeout(() => {
     lightboxFoto.src = '';
     lightboxFoto.classList.remove('ken-burns');
+    lightboxFoto.style.animationDuration = '';
     lightbox.classList.remove('active', 'fadeout');
     lightboxAudio.src = '';
     document.body.style.overflow = '';
-  }, 1500); // duração do fade — 1.5s
+  }, 1500);
 }
